@@ -17,6 +17,17 @@ const createBlog = async (req, res) => {
     }
 };
 
+const getAllBlogs = async (req, res) => {
+    try {
+        const db = await getPool();
+        const [blogs] = await db.execute('SELECT * FROM blogs ORDER BY created_at DESC');
+        res.json(blogs);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
 module.exports = {
+    getAllBlogs,
     createBlog
 };
