@@ -46,7 +46,7 @@ A simple blog platform built with **Express**, **MySQL**, **Multer**, and **Node
 
 ```bash
 git clone https://github.com/mohosin2126/blog-api.git
-cd blog-mysql
+cd blog-api
 npm install
 ````
 
